@@ -51,8 +51,48 @@ public class EstruturaEstatica <T>{
             }
             this.elementos=elementosNovos;
         }
+    }
+    public int tamanho(){
+        return this.tamanho;
+    }
 
+    @Override
+    public String toString(){
+        StringBuilder s= new StringBuilder();
+        s.append("[");
 
+        for (int i=0;i<this.tamanho-1;i++){
+
+            s.append(this.elementos[i]);
+            s.append(",");
+        }
+
+        if(this.tamanho>0){
+
+            s.append(this.elementos[this.tamanho-1]);
+        }
+
+        s.append("]");
+
+        return s.toString();
+    }
+
+    public boolean estaVazia(){
+
+        return this.tamanho==0;
+    }
+
+    public void remove(int posicao){
+        if(!(posicao>=0 && posicao<tamanho)){
+
+            throw new IllegalArgumentException("Posicao invalida");
+        }
+
+        for(int i=posicao;i<tamanho-1;i++){
+            elementos[i]=elementos[i+1];
+
+        }
+        tamanho--;
 
     }
 }
