@@ -16,6 +16,7 @@ public class Teste {
 
         }
 
+        vetor.adicionaInicio(0,"Lucas");
         System.out.println(vetor.tamanho());
         System.out.println(vetor.toString());
         vetor.remove(0);

@@ -34,11 +34,17 @@ public class Fila <T> extends EstruturaEstatica<T>{
         return elementoASerRemovido;
     }
 
-    public T preferencia(T elemento){
-        
+    public boolean preferencia(int posicao,T elemento){
 
 
+        this.aumentaCapacidade();
+        for (int i=this.tamanho-1;i>=posicao;i--){
+            this.elementos[i+1]=this.elementos[i];
+        }
 
+        this.elementos[posicao]=elemento;
+        this.tamanho++;
 
+        return true;
     }
 }
