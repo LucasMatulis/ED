@@ -4,7 +4,7 @@ public class TesteFila {
     public static void main(String[] args) {
 
         boolean atendimento=true;
-        int idade=0;
+        int preferencial=0;
         int idoso=0;
         Fila<Integer> fila= new Fila<Integer>();
 
@@ -13,8 +13,8 @@ public class TesteFila {
             switch (escolha) {
 
                 case 1:
-                    idade = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade do doador"));
-                    if (idade >= 60) {
+                    preferencial = JOptionPane.showConfirmDialog(null,"Você é preferencial?");
+                    if (preferencial == 0) {
                         fila.preferencia(idoso, Integer.parseInt(JOptionPane.showInputDialog("Digite o numero da comanda")));
                         idoso++;
                     } else
@@ -34,6 +34,7 @@ public class TesteFila {
             }
             System.out.println(fila.toString());
         }while (atendimento);
+
 
     }
 }
