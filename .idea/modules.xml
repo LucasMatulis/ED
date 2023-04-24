@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ADO2/ADO2.iml" filepath="$PROJECT_DIR$/ADO2/ADO2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ADO3/ADO3.iml" filepath="$PROJECT_DIR$/ADO3/ADO3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Aula05/Aula05.iml" filepath="$PROJECT_DIR$/Aula05/Aula05.iml" />
       <module fileurl="file://$PROJECT_DIR$/Aula06/Aula06.iml" filepath="$PROJECT_DIR$/Aula06/Aula06.iml" />
       <module fileurl="file://$PROJECT_DIR$/Aula07/Aula07.iml" filepath="$PROJECT_DIR$/Aula07/Aula07.iml" />

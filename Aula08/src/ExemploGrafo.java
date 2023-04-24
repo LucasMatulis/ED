@@ -9,11 +9,15 @@ public class ExemploGrafo {
         grafo.adicionarVertice("Claudio");
 
         grafo.adicionarAresta(2.0,"Paulo","Lorenzo");
-        grafo.adicionarAresta(3.0,"Lorenzo","Cleuza");
-        grafo.adicionarAresta(1.0,"Cleuza","Kleber");
-        grafo.adicionarAresta(1.0,"Cleuza","Claudio");
+        grafo.adicionarAresta(3.0,"Lorenzo","Kleber");
+        grafo.adicionarAresta(1.0,"Kleber","Cleuza");
+        grafo.adicionarAresta(1.0,"Paulo","Cleuza");
         grafo.adicionarAresta(2.0,"Claudio","Lorenzo");
+        grafo.adicionarAresta(3.0,"Claudio","Paulo");
 
-        grafo.BuscaEmLargura();
+
+
+
+        grafo.BuscaEmLargura(4);
     }
 }

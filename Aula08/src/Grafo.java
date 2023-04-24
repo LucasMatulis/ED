@@ -35,10 +35,10 @@ public class Grafo <T>{
         return vertice;
     }
 
-    public void BuscaEmLargura(){
+    public void BuscaEmLargura(int elemento){
         ArrayList<Vertice<T>> marcados= new ArrayList<Vertice<T>>();
         ArrayList<Vertice<T>> fila= new ArrayList<Vertice<T>>();
-        Vertice<T> atual = this.vertices.get(0);
+        Vertice<T> atual = this.vertices.get(elemento);
         marcados.add(atual);
         System.out.println(atual.getDado());
         fila.add(atual);
