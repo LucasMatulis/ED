@@ -47,35 +47,21 @@ public class GPS<T>{
 
         ArrayList<T> caminho = new ArrayList<>();
         distancia = 0;
-        boolean encontrado = dfs(verticePartida, verticeChegada, caminho);
-
-        if (!encontrado) {
-            return new ArrayList<>(); // Retorna lista vazia se não foi encontrado um caminho
-        }
-
-        System.out.println("Distancia total: "+getDistancia()+"m");
-        return caminho;
-    }
-
-    public ArrayList<T> encontrarOutroCaminho(T partida, T chegada) {
-        Vertice<T> verticePartida = getVertice(partida);
-        Vertice<T> verticeChegada = getVertice(chegada);
-
-        ArrayList<T> segundoCaminho = new ArrayList<>();
-        distancia = 0;
 
         if (verticePartida == null || verticeChegada == null) {
-            return segundoCaminho; // Retorna lista vazia se os vértices de partida ou chegada não forem encontrados
+            System.out.println("Nenhuma rota encontrada");
+            return caminho; // Retorna lista vazia se os vértices de partida ou chegada não forem encontrados
         }
 
-        // Utilizando o algoritmo de busca em profundidade (DFS) para encontrar o segundo caminho
-        boolean encontrado = dfs(verticePartida, verticeChegada, segundoCaminho);
-
-        if (!encontrado) {
-            return segundoCaminho; // Retorna lista vazia se não foi encontrado um caminho
+        // Utilizando o algoritmo de busca em profundidade (DFS) para encontrar o caminho
+        dfs(verticePartida, verticeChegada, caminho);
+        if(caminho.size()==0){
+            System.out.println("Nenhuma rota encontrada");
         }
+        else
+            System.out.println("Distancia total: "+getDistancia()+"m");
 
-        return segundoCaminho;
+        return caminho;
     }
 
     private boolean dfs(Vertice<T> atual, Vertice<T> chegada, ArrayList<T> caminho) {
