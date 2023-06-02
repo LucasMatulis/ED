@@ -1,6 +1,6 @@
 public class ExemploGrafo {
     public static void main(String[] args) {
-        Grafo<String> grafo= new Grafo<String>();
+        Grafo<String> grafo= new Grafo<>();
 
         grafo.adicionarVertice("Paulo");
         grafo.adicionarVertice("Lorenzo");

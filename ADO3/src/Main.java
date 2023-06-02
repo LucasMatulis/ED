@@ -15,13 +15,10 @@ public class Main {
         graph.addVertex(e);
 
         graph.addEdge(a, b, 2);
-        graph.addEdge(a, e, 1);
-        graph.addEdge(b, e, 2);
-        graph.addEdge(b, c, 1);
-        graph.addEdge(c, b, 2);
-        graph.addEdge(c, d, 1);
-        graph.addEdge(d, e, 2);
-        graph.addEdge(d, c, 1);
+        graph.addEdge(a, c, 1);
+        graph.addEdge(b, e, 1);
+        graph.addEdge(c, e, 1);
+     
 
 
 
