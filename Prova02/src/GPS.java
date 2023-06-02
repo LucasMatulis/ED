@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class GPS<T>{
 
@@ -81,5 +82,6 @@ public class GPS<T>{
         caminho.remove(atual.getDado());
         return false;
     }
+
 
 }
